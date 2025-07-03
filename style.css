@@ -1,0 +1,96 @@
+body{
+    
+    background-color: #DF2F47;
+    
+}
+header{
+color: white;
+text-align: center;
+}
+
+.caixa{
+    width:500px;
+    height: 250px;
+    border: 1px dashed black;
+    border-radius: 4px;
+    padding: 5px;
+    position: relative;
+}
+section{
+background: white;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: flex;
+width: 500px;
+margin: auto;
+border: black 1px solid;
+}
+footer{
+color: white;
+text-align: center;
+font-style: italic;
+}
+.Botao_arquivo{
+    width: 150px;
+    height: 30px;
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: bolder;
+    display: block;
+    padding: 8px 16px;
+    margin-top: 150px;
+    background-color: #A90A0C;
+    color: white;
+    border-radius: 10px;
+}
+.Botao_arquivo:hover{
+    background-color: rgb(192, 4, 4);
+    color: rgb(233, 158, 158);
+}
+
+.pesquisa-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+
+.lupa {
+    position: absolute;
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: #A90A0C;
+    pointer-events: none;
+}
+
+.barra-pesquisa {
+    width: 35%;           /* deixa mais curta */
+    height: 24px;         /* deixa mais fina */
+    padding: 4px 8px 4px 28px; /* ajusta o espaço para a lupa */
+    border: 1px solid #DF2F47;
+    border-radius: 10px;
+    font-size: 13px;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img#logo {
+    position: absolute;
+    top: -30px;
+    left: 6px;
+    width: 150px;   /* ajuste o tamanho conforme necessário */
+    height: 150px;  /* ajuste o tamanho conforme necessário */
+    margin: 0;
+    display: block;
+  /* Centraliza a imagem e adiciona espaço abaixo */
+}
+
+img#lupa {
+    width: 25px;   /* ajuste o tamanho conforme necessário */
+    height: 25px;  /* ajuste o tamanho conforme necessário */
+    margin-right: 10px; /* espaço entre a lupa e a barra de pesquisa */
+    vertical-align: middle; /* alinha a lupa verticalmente com o texto */
+}
