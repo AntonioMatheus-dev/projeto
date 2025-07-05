@@ -4,47 +4,63 @@ const inputArquivo = document.getElementById("fileInput") as HTMLInputElement;
 const textoArraste = document.getElementById("texto-arraste") as HTMLElement;
 const arquivoInfo = document.getElementById("arquivo-info") as HTMLElement;
 const nomeArquivo = document.getElementById("nome-arquivo") as HTMLElement;
+const arrasteDiv = document.querySelector('.arraste') as HTMLElement;
 
 function mostrarArquivo(nome: string) {
-    if (arquivoInfo && nomeArquivo && textoArraste) {
-        nomeArquivo.textContent = nome;
-        arquivoInfo.style.display = "flex";
-        textoArraste.style.display = "none";
-    }
-    if (botaoArquivo) {
-        botaoArquivo.classList.add("azul");
-    }
+  if (arquivoInfo && nomeArquivo && textoArraste) {
+    nomeArquivo.textContent = nome;
+    arquivoInfo.style.display = "flex";
+    textoArraste.style.display = "none";
+  }
+  if (botaoArquivo) {
+    botaoArquivo.classList.add("azul");
+    botaoArquivo.innerHTML = "<strong>RESUMO</strong>";
+  }
+  // Esconde a nuvem e mostra o check
+  const nuvem = document.getElementById("nuvem-img") as HTMLImageElement;
+  const check = document.getElementById("check-img") as HTMLImageElement;
+  if (nuvem) nuvem.style.display = "none";
+  if (check) check.style.display = "inline-block";
+  if (arrasteDiv) {
+    arrasteDiv.classList.add('pdf-selecionado');
+  }
+  // Esconde a logo e a barra de pesquisa
+  const logo = document.getElementById("logo") as HTMLElement;
+  const pesquisa = document.querySelector(".pesquisa-container") as HTMLElement;
+  if (logo) logo.style.display = "none";
+  if (pesquisa) pesquisa.style.display = "none";
 }
 
 if (dropImagem) {
-    dropImagem.addEventListener('dragover', (e: DragEvent) => {
-        e.preventDefault();
-        dropImagem.classList.add('dragover');
-    });
+  dropImagem.addEventListener("dragover", (e: DragEvent) => {
+    e.preventDefault();
+    dropImagem.classList.add("dragover");
+  });
 
-    dropImagem.addEventListener('dragleave', () => {
-        dropImagem.classList.remove('dragover');
-    });
+  dropImagem.addEventListener("dragleave", () => {
+    dropImagem.classList.remove("dragover");
+  });
 
-    dropImagem.addEventListener('drop', (e: DragEvent) => {
-        e.preventDefault();
-        dropImagem.classList.remove('dragover');
-        if (e.dataTransfer && e.dataTransfer.files.length > 0) {
-            const file = e.dataTransfer.files[0];
-            if (file.type === "application/pdf") {
-                mostrarArquivo(file.name);
-            }
-        }
-    });
+  dropImagem.addEventListener("drop", (e: DragEvent) => {
+    e.preventDefault();
+    dropImagem.classList.remove("dragover");
+    if (e.dataTransfer && e.dataTransfer.files.length > 0) {
+      const file = e.dataTransfer.files[0];
+      if (file.type === "application/pdf") {
+        mostrarArquivo(file.name);
+      }
+    }
+  });
 }
 
 if (inputArquivo) {
-    inputArquivo.addEventListener('change', () => {
-        if (inputArquivo.files && inputArquivo.files.length > 0) {
-            const file = inputArquivo.files[0];
-            if (file.type === "application/pdf") {
-                mostrarArquivo(file.name);
-            }
-        }
-    });
+  inputArquivo.addEventListener("change", () => {
+    if (inputArquivo.files && inputArquivo.files.length > 0) {
+      const file = inputArquivo.files[0];
+      if (file.type === "application/pdf") {
+        mostrarArquivo(file.name);
+      }
+    }
+  });
 }
+

@@ -116,27 +116,48 @@ img#lupa {
     text-align: center;        
 }
 .arraste-aqui.dragover {
-    border: 2px dashed #0773ff;
+    border: 2px dashed #3F5CED;
     opacity: 0.7;
 }
 .Botao_arquivo.azul{
-    background-color: #0773ff;
+    background-color: #3F5CED;
     color: white;
     border: none;
 }
 .arquivo-info {
-    background: #0773ff;
+    width: 130px;
+    height: 20px;
+    background: #321BFF;
     color: #fff;
     border-radius: 8px;
     padding: 8px 12px;
-    margin-top: 10px;
+    margin-top: -35px;
+    margin-left: 40px;
     display: flex;
     align-items: center;
     gap: 8px;
     justify-content: center;
 }
 .pdf-icon {
-    margin-top: 1px;
+    margin-top: 2px;
     width: 2opx;
     height: 20px;
+}
+#check-img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 180px;
+    margin-top: 40px;
+    
+}
+.arraste.pdf-selecionado {
+    width: 190px;
+    height: 80px; /* ajuste a altura para manter o efeito cilíndrico */
+    border: 2px solid #0e0c0c;
+    background: #fff;
+    border-radius: 30px; /* valor alto para efeito cilíndrico */
+    /* Remova o background-image se não quiser o ícone no fundo */
+    background-image: none;
+    transition: border-radius 0.3s;
 }
