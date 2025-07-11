@@ -35,8 +35,7 @@ font-style: italic;
     width: 150px;
     height: 30px;
     margin-left: 15px;
-    font-size: 12px;
-    font-weight: bolder;
+    font: normal 10pt Arial;
     display: block;
     padding: 8px 16px;
     margin-top: -50px;
@@ -90,9 +89,9 @@ img#logo {
 }
 
 img#lupa {
-    width: 25px;   /* ajuste o tamanho conforme necessário */
-    height: 25px;  /* ajuste o tamanho conforme necessário */
-    margin-right: 10px; /* espaço entre a lupa e a barra de pesquisa */
+    width: 30px;   /* ajuste o tamanho conforme necessário */
+    height: 30px;  /* ajuste o tamanho conforme necessário */
+    margin-left: -10px; /* espaço entre a lupa e a barra de pesquisa */
     vertical-align: middle;
      /* alinha a lupa verticalmente com o texto */
 }
@@ -104,6 +103,7 @@ img#lupa {
     margin: 0 auto;
 }
 .arraste{
+    font: normal 13pt Arial;
     border: 1px dashed rgba(85, 85, 85, 0.596);   
     border-radius: 8px;
     padding: 10px;
@@ -120,6 +120,9 @@ img#lupa {
     opacity: 0.7;
 }
 .Botao_arquivo.azul{
+    text-align: center;
+    margin-top: 15px;
+    font: normal 18pt Arial;
     background-color: #3F5CED;
     color: white;
     border: none;
@@ -127,7 +130,7 @@ img#lupa {
 .arquivo-info {
     width: 130px;
     height: 20px;
-    background: #321BFF;
+    background: #250fee;
     color: #fff;
     border-radius: 8px;
     padding: 8px 12px;
@@ -160,4 +163,21 @@ img#lupa {
     /* Remova o background-image se não quiser o ícone no fundo */
     background-image: none;
     transition: border-radius 0.3s;
+}
+.seta-voltar{
+    width: 32px;
+    height: 32px;
+    display: block;
+    display: none;
+    cursor: pointer;
+    font-size: 32px;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    color: #000000;
+    z-index: 10;
+    transition: color 0.2s;
+}
+.seta-voltar:hover {
+    color: #222021;
 }

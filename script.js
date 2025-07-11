@@ -32,6 +32,14 @@ function mostrarArquivo(nome) {
         logo.style.display = "none";
     if (pesquisa)
         pesquisa.style.display = "none";
+    // Mostra a seta de voltar
+    var setaVoltar = document.getElementById("voltar");
+    if (setaVoltar) {
+        setaVoltar.style.display = "block";
+        setaVoltar.addEventListener("click", function () {
+            window.location.reload(); // ou window.history.back();
+        });
+    }
 }
 if (dropImagem) {
     dropImagem.addEventListener("dragover", function (e) {

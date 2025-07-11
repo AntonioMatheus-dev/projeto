@@ -29,6 +29,14 @@ function mostrarArquivo(nome: string) {
   const pesquisa = document.querySelector(".pesquisa-container") as HTMLElement;
   if (logo) logo.style.display = "none";
   if (pesquisa) pesquisa.style.display = "none";
+  // Mostra a seta de voltar
+  const setaVoltar = document.getElementById("voltar") as HTMLElement;
+  if (setaVoltar) {
+    setaVoltar.style.display = "block";
+    setaVoltar.addEventListener("click", () => {
+      window.location.reload(); // ou window.history.back();
+    });
+  }
 }
 
 if (dropImagem) {
