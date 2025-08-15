@@ -44,10 +44,7 @@ font-style: italic;
     border-radius: 10px;
     cursor: pointer;
 }
-.Botao_arquivo:hover{
-    background-color: rgb(192, 4, 4);
-    color: rgb(233, 158, 158);
-}
+
 
 .pesquisa-container {
     position: relative;
@@ -191,5 +188,13 @@ img#lupa {
 #msg-erro{
     text-align: center;
     font-size: small;
+}
 
+#nomes{
+    margin-right: 990px;
+    margin-top: 220px
+}
+.Botao_arquivo:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }

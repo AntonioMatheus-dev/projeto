@@ -137,7 +137,12 @@ function mostrarErro() {
     botaoArquivo.classList.remove("azul");
     botaoArquivo.style.backgroundColor = "#DF2F47";
     botaoArquivo.innerHTML = "<strong>ERRO</strong>";
+    botaoArquivo.disabled = true;
     botaoArquivo.onclick = null;
+    botaoArquivo.setAttribute("tabindex", "-1");
+  }
+  if (inputArquivo) {
+    inputArquivo.disabled = true; // desativa o input real
   }
 
   // Mostra seta de voltar
