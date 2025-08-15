@@ -8,7 +8,7 @@ const arrasteDiv = document.querySelector('.arraste') as HTMLElement;
 
 function mostrarArquivo(nome: string) {
   if (arquivoInfo && nomeArquivo && textoArraste) {
-    nomeArquivo.textContent = nome;
+    nomeArquivo.textContent = "Arquivo.pdf";
     arquivoInfo.style.display = "flex";
     textoArraste.style.display = "none";
   }

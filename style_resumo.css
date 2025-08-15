@@ -1,4 +1,4 @@
-body{
+   body{
     
     background-color: #DF2F47;
     
@@ -193,3 +193,36 @@ img#lupa {
     font-size: small;
 
 }
+  .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    textarea {
+      width: 98%;
+      height: 300px;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    .botoes {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #3F5CED;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2c47b8;
+    }
