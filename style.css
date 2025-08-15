@@ -192,7 +192,8 @@ img#lupa {
 
 #nomes{
     margin-right: 990px;
-    margin-top: 220px
+    margin-top: 220px;
+    width: 250px;
 }
 .Botao_arquivo:disabled {
   cursor: not-allowed;
